@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        	 <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<title>E-commerce Website</title>
+    </head>
+    <body>
+        <!--Navbar section starts-->
+        <section class="Navbar">
+            <div class="Navbar-logo">
+                <img src="data:image/jpeg;base64,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">
+            </div></div>
+            <div class="Navbar-links">
+                <ul>
+                  <div class="dropdown">
+                    <a><li class="dropbtn"> Men </li></a>
+                    <div class="dropdown-content">
+                      <a href="#">Topwear</a>
+                      <a href="#">Footwear</a>
+                      <a href="#">Bottomwear</a>
+                    </div></div>
+                    <div class="dropdown">
+                      <a><li class="dropbtn"> Women </li></a>
+                      <div class="dropdown-content">
+                        <a href="#">Indian & Fusion Wear</a>
+                        <a href="#">Western Wear</a>
+                        <a href="#">Sports & Active Wear</a>
+                      </div></div>
+                      <div class="dropdown">
+                        <a><li class="dropbtn"> Kids </li></a>
+                        <div class="dropdown-content">
+                          <a href="#">Boys Clothes</a>
+                          <a href="#">Girls Clothes</a>
+                          <a href="#">Brands</a>
+                        </div></div>
+                        <div class="dropdown">
+                          <a><li class="dropbtn"> Home & Living </li></a>
+                          <div class="dropdown-content">
+                            <a href="#">Bath</a>
+                            <a href="#">Flooring</a>
+                            <a href="#">Lamp & Lighting</a>
+                          </div></div>
+                          <div class="dropdown">
+                            <a><li class="dropbtn"> Offers </li></a>
+                            <div class="dropdown-content">
+                              <a href="#">Boys wear at 50%</a>
+                              <a href="#">Girls wear at 50%</a>
+                              <a href="#">Kids wear at 50%</a>
+                            </div></div>
+                </ul>
+            </div>
+            <div class="Navbar-search">
+                <button><i class="fa fa-search"></i></button>
+                <input type="text" placeholder="Search for products,brands and more">
+            </div>
+            <div class="Navbar-bar">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="Navbar-right">
+                <i class="fa fa-user"> Profile</i>
+                <i class="fa fa-heart"> Wishlist</i>
+                <i class="fa fa-shopping-bag"> Cart</i>
+            </div>
+        </section>
+        <!--First slide-->
+        <Section class="img-slider">
+            <div class="slider-container">
+              
+              <div class="slide">
+                <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/3/14/1ae5e872-3528-463a-8968-d4edb5a281791615735151188-Lifestyle_Desk_Banner.jpg">
+              </div>
+              
+              <div class="slide">
+                <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/3/14/92d441e5-422c-425b-91a6-0da8c398f55c1615735151174-cat-fest-dk-mar.jpg">
+              </div>
+          
+              <div class="slide">
+                <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/3/14/dc6cf926-8dfe-4161-b4d0-e78c622df2771615743989381-Desktop-Shop-Now.gif">
+              </div>
+            </div>
+          </Section>
+          <section class="deals">
+              <h2>Deals of the Day</h2>
+              <img style="margin-left: 1.5em;" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2021/3/15/98be3f06-eb6f-4996-ac1f-8cde2a8d68831615819711670-UpTo60.jpg">
+              <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2021/3/15/199ee38c-3472-407e-a537-87ead38ebe1d1615819711725-UpTo60_2.jpg">
+              <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2021/3/15/e2c197cf-c792-414a-a5b6-fa29f089199f1615819711708-UpTo50.jpg">
+              <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2021/3/15/55b03246-6200-4cd1-8026-ac12e0b5d6081615819711690-Under2499.jpg">
+              <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2021/3/15/d43a7bbd-c140-4d0e-8999-141d5c8ce1ef1615820389558-Faces-Canada.jpg">
+          </section>
+          <section class="big-deals">
+              <h2>Biggest Deals on Top Brands</h2>
+              <img style="margin-left: 3em;" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/14/6e0a9fa0-9e8d-4c29-9250-995c9f1ba9331605363273176-Home---U.S.-Polo-Assn..jpg">
+              <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/e72c82f2-cfd5-4f9a-b1b0-ba9e2b3e51251598892519506-W.jpg">
+              <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/14/0524cbd5-f034-4155-9e3b-336c4e530ee41605363272658-Home---Levis.jpg">
+              <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/64ecc170-58af-473f-8144-b1639895a8291598892519457-Veromodo.jpg">
+              <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/af31285e-f6a3-426e-bbea-0aedef9da17c1598892377537-Tommy-Hilfiger.jpg">
+              <img style="margin-left: 3em;" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/9/4/e6c7a718-acc0-4aa6-b04c-470ab139d66c1599230080722-F21--4-.jpg">
+              <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/14/d5c17859-f366-4a65-ab42-5a066254feaa1605363272474-Home---GAP.jpg">
+              <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/14/5544cd64-d95b-461d-802a-8025fdfeb3331605363272844-Home---Nike.jpg">
+              <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/8d5afb84-a464-40af-9971-2e9f0827e9b71598892377591-UCB.jpg">
+              <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/31/581e2bf6-6d47-4a4b-a11f-43200dc9c6791598892519362-Puma.jpg">
+          </section>
+        <section class="cat-bag">
+          <h2>Categories to Bag</h2>
+          <img style="margin-left: 1.5em;" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2020/7/8/89f1bd9d-3a28-456d-888a-beff717a06f81594222908155-Shirts.jpg">
+          <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2020/7/8/9ff1f34e-9242-47fd-9566-e7d7a5c240511594222908483-T-shirt.jpg">
+          <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2020/7/8/720cf6ef-3be4-4825-8211-0125c942e3821594222907960-Jeans.jpg">
+          <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2020/7/8/2bac5e2d-337b-42c0-88c7-3d4e2dc464141594222908262-Shorts-_-Trousers.jpg">
+          <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2020/7/8/ae14f627-9fd9-41ce-80a4-f107c316c7eb1594222907625-Casual-shoes.jpg">
+          <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2020/7/8/f0f9b81a-b9d5-4b8b-94d5-ea878fa9b18e1594222834121-Infant-Essential.jpg">
+          <img  style="margin-left: 1.5em;" src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2020/7/8/8d992d81-49e6-4dec-89a4-49a8af8beb5d1594222967220-Kurtas-_-Kurta-Sets.jpg">
+          <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2020/7/8/a048cca8-7b5d-417e-9645-ca98f4b6e52c1594222967506-Sarees.jpg">
+          <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2020/7/8/b0f459a0-9ef0-4392-a9ed-23892a36e79c1594222966859-Dresses.jpg">
+          <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2020/7/8/a4dedaa4-3710-4061-b7d6-ca8c83ce9d021594222967117-Heels.jpg">
+          <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2020/7/8/a352f908-57c8-4c66-b052-18137cf15e6c1594222967074-Handbags.jpg">
+          <img src="https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2020/7/8/18eb31db-8dcb-4efa-b92d-61c8ebe0ee811594222834368-Shorts.jpg">
+        </section>
+        <section class="Top-brands">
+          <h2>Explore Top Brands</h2>
+          <img style="margin-left: 2em;" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/25/a88b9390-5adb-493b-a1b3-702c59ccf53a1598348260502-Nike.jpg">
+          <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/25/c9f66558-feab-4d76-aa3c-adc68d81dce21598348260415-Levis.jpg">
+          <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/5/178c1e5d-69f2-402f-a2a5-ef44700a0f691596640983793-Roadster---.jpg">
+          <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/25/085719b1-c71e-4f47-950c-9a6b7f291fac1598348260370-Jack-_-Jones.jpg">
+          <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/5/774f42c4-f459-4514-9b90-cf8a60a5f68c1596644478087-hrx30.jpg">
+          <img style="margin-left: 2em;" src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/25/f6e40444-b1a4-4c91-bb3c-fe213356e7de1598348260541-Only.jpg">
+          <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/5/a6de806a-b58b-460b-97fd-d78d80eab39b1596641021693-Women-s-Ethnic-Wear_Anouk.jpg">
+          <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/25/8d13b55d-a6a0-40ae-b39f-16f43e7911681598348260460-MAC.jpg">
+          <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/25/046ab589-87d5-4afa-8ab3-10e06fdbe6a61598348260596-W.jpg">
+          <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/25/f2fdda02-423c-4f11-8f1b-618ba807e5841598348260323-H_M.jpg">
+        </section>
+        <section class="footer">
+          <div class="left-foo">
+            <h6>ONLINE SHOPPING</h6>
+            <ul>
+              <li>Men</li>
+              <li>Women</li>
+              <li>Kids</li>
+              <li>Home & Living</li>
+            </ul>
+          </div>
+          <div class="cent-foo">
+            <h6>Useful Links</h6>
+            <ul>
+              <li>Contact US</li>
+              <li>FAQs</li>
+              <li>T&C</li>
+              <li>Terms of Use</li>
+            </ul>
+          </div>
+          <div class="foo-exp">
+            <h6>Experience Myntra App on Mobile</h6>
+            <img style="margin-left: 0.5em;" src="https://constant.myntassets.com/web/assets/img/80cc455a-92d2-4b5c-a038-7da0d92af33f1539674178924-google_play.png">
+            <img style="padding: 1.3em;" src="https://constant.myntassets.com/web/assets/img/bc5e11ad-0250-420a-ac71-115a57ca35d51539674178941-apple_store.png">
+          </div>
+          <div class="icons">
+            <h6>Keep in touch</h6>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-whatsapp"></i>
+            <i class="fa fa-youtube"></i>
+          </div>
+          
+        </section>
+        <div class="text-foo">
+            <h6>Popular Search</h6>
+            <p>Makeup | Dresses | For Girls | T-Shirts | Sandals | Headphones | Babydolls | Blazers For Men | Handbags | Ladies Watches | Bags | Sport Shoes | Reebok Shoes | Puma Shoes | Boxers | Wallets | Tops | Earrings | Fastrack Watches | Kurtis | Nike  Smart Watches | Titan Watches | Designer Blouse |
+               Gowns  Rings | Cricket Shoes | Forever 21 | Eye Makeup | Photo Frames | Punjabi Suits | Bikini | Myntra Fashion Show | Lipstick | Saree | Watches | Dresses | Lehenga | Nike Shoes | Goggles | Bras  Suit | Chinos | Shoes | Adidas Shoes | Woodland Shoes | Jewellery | Designers Sarees.</p>
+          </div>
+          <div class="lst-foo">
+            <h6>In case of any concern,<span style="color:skyblue">Contact Us</span></h6>
+            <h6>© 2021 www.myntra.com. All rights reserved</h6>
+          </div>
+        <!--Jquery starts-->
+        <script>
+         //   $(document).ready(function(){
+           // $('.Navbar-bar').click(function(){
+             //       $('.Navbar-links').slideToggle('slow');
+               // });
+           // });
+        </script>
+    </body>
+</html>
